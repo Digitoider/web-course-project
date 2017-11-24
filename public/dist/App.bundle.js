@@ -1040,15 +1040,15 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var mapOptions = {
   center: {
-    lat: 43.2,
-    lng: -79.8
+    lat: 44.95, //43.2,
+    lng: 34.10 //-79.8,
   },
   zoom: 10
 };
 
 function loadPlaces(map) {
-  var lat = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 43.2;
-  var lng = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : -79.8;
+  var lat = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 44.95;
+  var lng = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 34.10;
 
   _axios2.default.get('/api/stores/near?lat=' + lat + '&lng=' + lng).then(function (res) {
     var places = res.data;

@@ -24,9 +24,9 @@ mixin storeForm(store = {})
     
     - const tags = store.tags || []
     
-    ul.tags
-      each choice in choices
-        .tag.tag__choice 
-          input(type="checkbox" name="tags" id=choice value=choice checked=(tags.includes(choice)))
-          label(for=choice)= choice
+    //- ul.tags
+    //-   each choice in choices
+    //-     .tag.tag__choice 
+    //-       input(type="checkbox" name="tags" id=choice value=choice checked=(tags.includes(choice)))
+    //-       label(for=choice)= choice
     input(type="submit" value="Save" class="button")

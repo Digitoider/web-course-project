@@ -59,7 +59,7 @@ exports.getStores = async(req, res) => {
     res.redirect(`/stores/page/1`);
     return;
   }
-  const limit = 4;
+  const limit = 6;
   const skip = (page - 1) * limit;
   const storesPromise =  Store
     .find()
@@ -162,7 +162,7 @@ exports.mapStores = async (req, res) => {
           type: 'Point',
           coordinates
         },
-        $maxDistance: 10000, // 10 km
+        $maxDistance: 100000, // 100 km
       }
     }
   };
